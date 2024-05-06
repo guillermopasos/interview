@@ -1,0 +1,15 @@
+pipeline {
+    agent any
+    stages {
+        stage('Pull'){
+            steps {
+                sh 'docker pull memopasos32/jenkinstutorial:v1.0'
+            }
+        }
+        stage('Run'){
+            steps {
+                sh 'docker run memopasos32/jenkinstutorial:v1.0'
+            }
+        }
+    }
+}
