@@ -3,12 +3,12 @@ pipeline {
     stages {
         stage('Pull'){
             steps {
-                bat 'docker pull memopasos32/jenkinstutorial:v1.0'
+                sh 'docker pull memopasos32/jenkinstutorial:v1.0'
             }
         }
         stage('Run'){
             steps {
-                bat 'docker run memopasos32/jenkinstutorial:v1.0'
+                sh 'docker run memopasos32/jenkinstutorial:v1.0'
             }
         }
     }
